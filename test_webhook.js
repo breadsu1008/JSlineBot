@@ -3,6 +3,9 @@ const line = require('./index')
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
+//let PORT = process.env.PORT||'5000';
+
+
 
 // need raw buffer for signature validation
 app.use(bodyParser.json({
@@ -88,6 +91,15 @@ app.post('/test/',function (req,res,next) {
             res.json({success:false})
            });
 })
-app.listen(process.env.PORT || 8080, () => {
- // console.log('Example app listening on port 8080!')
+var http = require('http');
+var server = http.createServer(app);
+
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number,()=>{
+  console.log('Express server listening on port %d in mode' , port_number)
+});
+/*
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Express server listening on port in mode')
 })
+*/
