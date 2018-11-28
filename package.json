@@ -4,8 +4,9 @@
   "description": "Node client for LINE Bot API",
   "main": "index.js",
   "scripts": {
-    "start": "node test_webhook.js"
     
+    "test": "echo \"Error: no test specified\" && exit 1" ,  
+    "start": "node test_webhook.js"
   },
   "repository": {
     "type": "git",
