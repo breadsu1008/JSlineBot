@@ -40,6 +40,11 @@ line.init({
  * }
  */
 
+app.get('/gettest/',function(req,res,next){
+    res.send('GET request to homepage');
+})
+
+
 app.post('/webhook/', line.validator.validateSignature(), (req, res, next) => {
   // get content from request body
   const promises = req.body.events.map(event => {
