@@ -1,8 +1,7 @@
-/*node_modules/
+#node_modules/
 #tmp/
 #.DS_Store
-npm-debug.log
+#npm-debug.log
 
 # Ignore all swap files
-*.swp
-*/
+#.swp
